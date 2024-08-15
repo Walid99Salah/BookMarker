@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+   
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Assignment 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+  </head>
+
+  <body>
+
+    <main class="interface py-5 vh-100 position-relative">
+
+      <div class="d-flex justify-content-center pb-4"><h1 class="pb-2 position-relative">Bookmarker</h1></div>
+
+      <div class="container pt-4">
+        <div class="book-body py-3">
+          <h2 class="text-center pt-3">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites 
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="site-name p-4">
+            <i class="fa-solid fa-book-bookmark me-1"></i>
+            <label for="siteName" class="mb-2 fw-semibold"> Site Name</label>
+            <input type="text" oninput="validation(this)" id="siteName" class="form-control" placeholder="Bookmark Name">
+          </div>
+          <div class="site-url px-4 mb-2">
+            <i class="fa-solid fa-link me-1"></i>
+            <label for="siteUrl" class="mb-2 fw-semibold"> Site URL</label>
+            <input type="text" oninput="validation(this)" id="siteUrl" class="form-control" placeholder="Website URL">
+          </div>
+          <div class="text-center py-3"><button onclick="addValue()" class="btn sub-btn px-5">Submit</button></div>
+        </div>
+        <div class="bg-light fw-bold d-flex mt-4 py-2">
+          <h6 class="w-25 fw-bold text-center">index</h6>
+          <h6 class="w-25 fw-bold text-center">Website Name</h6>
+          <h6 class="w-25 fw-bold text-center">Visit</h6>
+          <h6 class="w-25 fw-bold text-center">Delete</h6>
+        </div>
+        <div id="newValue">
+  
+        </div>
+      </div>
+
+      <div id="aboveElement" class="d-none new-bg vh-100 position-absolute top-0 end-0 start-0 bottom-0 d-flex justify-content-center align-items-center">
+
+        <div class="unValid p-4 bg-light w-35 d-flex flex-column rounded">
+          <div class="unValid-Box pb-2">
+            <span class="box d-inline-block bg-danger rounded-circle mt-1"></span>
+            <span class="box d-inline-block bg-warning rounded-circle mt-1"></span>
+            <span class="box d-inline-block bg-success rounded-circle mt-1"></span>
+            <button onclick="closeBtn()" type="button" class="btn float-end border-0"><i class="fa-solid fa-xmark fs-3 "></i></button>
+          </div>
+          
+          <p class="pt-2">Site Name or Url is not valid, Please follow the rules below :</p>
+          <span class="text py-2"><i class="fa-regular fa-circle-right text-danger me-2"></i>Site name must contain at least 3 characters</span>
+          <span class="text py-2"><i class="fa-regular fa-circle-right text-danger me-2 mt-2"></i>Site URL must be a valid one</span>
+        </div>
+
+      </div>
+      
+
+    </main>
+
+
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
